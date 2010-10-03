@@ -210,6 +210,10 @@ on boot
     setprop ro.CONTENT_PROVIDER_MEM 5632
     setprop ro.EMPTY_APP_MEM 6144
 
+#Power Management Settings
+    write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/up_threshold 86
+    write /sys/devices/system/cpu/cpu0/cpufreq/ondemand/sampling_rate 46875
+
 # Write value must be consistent with the above properties.
 # Note that the driver only supports 6 slots, so we have HOME_APP at the
 # same memory level as services.
